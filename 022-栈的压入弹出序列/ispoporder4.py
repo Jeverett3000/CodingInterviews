@@ -8,11 +8,7 @@ class Solution:
 
         # write code here
 
-        if len(pushV) != len(popV):
-
-            return False
-
-        elif len(pushV) ==0:
+        if len(pushV) != len(popV) or len(pushV) == 0:
 
             return False
 
@@ -22,15 +18,11 @@ class Solution:
 
             return False
 
-        for i in range(len(popV)) :
-
+        for i in range(len(popV)):
             position = pushV.index(popV[i])
 
-            if len(pushV) == 1 :
-
-                if pushV[0] == popV[i]:
-
-                    return True
+            if len(pushV) == 1 and pushV[0] == popV[i]:
+                return True
 
             try:
 
@@ -50,9 +42,7 @@ class Solution:
 
                 return False
 
-        else:
-
-            return True
+        return True
 
 
 if __name__ == "__main__" :

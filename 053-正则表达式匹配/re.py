@@ -8,7 +8,7 @@ import re
 class Solution:
     # @return a boolean
     def isMatch(self, s, p):
-        return re.match('^' + p + '$', s) != None
+        return re.match(f'^{p}$', s) != None
 
 # debug
 s = Solution()
